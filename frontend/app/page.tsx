@@ -2,6 +2,8 @@ import styles from './page.module.css'
 import EditSVG from '@/assets/edit.svg'
 import Menhera from '@/assets/menhera.png'
 import Image from 'next/image'
+import Link from 'next/link'
+import Dashboard from './dashboard/page'
 
 export default function Home() {
 	return (
@@ -9,7 +11,7 @@ export default function Home() {
 			<main className={styles.main}>
 				<div className={styles.header}>
 					<h1 className={styles.headerText}>NextJS + Electron Boilerplate</h1>
-					<h4 className={styles.headerSubText}>
+					<h4 className={styles.headerSubText + 'text-teal-400'}>
 						That one boilerplate you couldn{"'"}t find, until now.
 					</h4>
 				</div>
@@ -28,6 +30,7 @@ export default function Home() {
 					{'<'}/{'>'} with ♥
 				</footer>
 			</main>
+			<div><Link href='/dashboard'>Apeta</Link></div>
 		</div>
 	)
 }

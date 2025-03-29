@@ -6,7 +6,9 @@ import electronIsDev from 'electron-is-dev'
 import ElectronStore from 'electron-store'
 import { fileURLToPath } from 'url'
 import { dirname } from 'path'
+import serve from 'electron-serve'
 
+const loadURL = serve({directory: 'frontend/build'});
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 const { autoUpdater } = electronUpdater
@@ -62,12 +64,17 @@ const spawnAppWindow = async () => {
 			preload: PRELOAD_PATH,
 		},
 	})
-
-	appWindow.loadURL(
-		electronIsDev
-			? 'http://localhost:3000'
-			: `file://${path.join(__dirname, '../../frontend/build/index.html')}`
-	)
+	
+	if (electronIsDev) {
+		appWindow.loadURL("http://localhost:3000");
+	} else {
+		loadURL(appWindow);
+	}
+	// appWindow.loadURL(
+	// 	electronIsDev
+	// 		? 'http://localhost:3000'
+	// 		: `file://${path.join(__dirname, '../../frontend/build/index.html')}`
+	// )
 	appWindow.maximize()
 	appWindow.setMenu(null)
 	appWindow.show()
