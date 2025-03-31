@@ -12073,7 +12073,7 @@ __metadata:
     react-dom: "npm:^18.3.1"
     storybook: "npm:^8.1.1"
     tailwindcss: "npm:^4.0.17"
-    tsc-alias: "npm:^1.8.8"
+    tsc-alias: "npm:^1.8.13"
     tsconfig-paths-webpack-plugin: "npm:^4.1.0"
     typescript: "npm:^5.4.5"
     wait-on: "npm:^7.2.0"
@@ -15192,9 +15192,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsc-alias@npm:^1.8.8":
-  version: 1.8.8
-  resolution: "tsc-alias@npm:1.8.8"
+"tsc-alias@npm:^1.8.13":
+  version: 1.8.13
+  resolution: "tsc-alias@npm:1.8.13"
   dependencies:
     chokidar: "npm:^3.5.3"
     commander: "npm:^9.0.0"
@@ -15204,7 +15204,7 @@ __metadata:
     plimit-lit: "npm:^1.2.6"
   bin:
     tsc-alias: dist/bin/index.js
-  checksum: 10c0/02d0e3309f5b4d5c2dfc09ddb1192faa75108025e37d51f85dd7cfaab1ebe69cd50a6ed17d2e5d692ddc406455c1b17dfc056ca6ac56f587cba7b63993de251c
+  checksum: 10c0/3f27c5cd92eb2704b5705b72b76fa08a187e7149f573fb0af26d38a757b88563a891150738c35e9f09d5825bffbbdecf536baa39b17c5f7906ea5eb658cffab8
   languageName: node
   linkType: hard
 
